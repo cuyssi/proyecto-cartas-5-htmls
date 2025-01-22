@@ -41,35 +41,32 @@ ul {
     display: flex;
     list-style: none;
 }
-
+/* todo este bloque es para hacer el hover de los enlaces del nav sin que se mueva el header, tuve que pedir ayuda a chatgpt*/
 a {
     color: white;
     text-shadow: 2px -1px rgb(70, 64, 67);
-    text-decoration: none; /* Quitar subrayado */
+    text-decoration: none; 
     font-size: 30px;
     margin-right: 10px;
-    display: inline-block; /* Asegura que sea tratado como bloque */
+    display: inline-block; 
 }
 
 a:hover {
-    color: bisque; /* Cambia el color del enlace */
-    text-decoration: none; /* Asegura que no esté subrayado */
-    transform: scale(1.2); /* Agranda el texto del enlace */
+    color: bisque; 
+    text-decoration: none; 
+    transform: scale(1.2); 
 }
 
-/* Estilo base para el li (sin cambios de color, solo el escalado) */
 li {
     font-size: 30px;
     display: inline-block;
     padding-right: 15px;    
     margin-bottom: -10px;
-    border: 2px solid transparent; /* Mantiene el borde invisible */
-     /* Solo transición en la escala */
+    border: 2px solid transparent;     
 }
 
-/* Hover en el li */
 li:hover {
-    transform: scale(1.2); /* Escala el li */
+    transform: scale(1.2); 
 }
 
 .grid {

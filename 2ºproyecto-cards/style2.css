@@ -21,9 +21,11 @@ header {
 }
 
 h1 {
+    /*pone el titulo en el centro y le da un sombreado*/
     color: white;
-    font-size: 40px;
-    text-shadow: 3px -1px rgb(172, 167, 170);
+    margin-left: 30px;
+    font-size: 49px;
+    text-shadow: 3px -1px rgb(20, 20, 20);
 }
 
 ul {
@@ -32,36 +34,33 @@ ul {
     margin-top: -40px;
 }
 
-a {
+a {/*todo este bloque hasta el contenedor es para hacer el hover de los enlaces del nav sin que se mueva el header, tuve que pedir ayuda a chatgpt*/
     color: white;
     text-shadow: 2px -1px rgb(70, 64, 67);
-    text-decoration: none; /* Quitar subrayado */
-    font-size: 30px;
-     /* Solo transición en color y escala */
-    display: inline-block; /* Asegura que sea tratado como bloque */
+    text-decoration: none; 
+    font-size: 30px;     
+    display: inline-block; 
 }
 
-/* Hover en el enlace */
 a:hover {
-    color: bisque; /* Cambia el color del enlace */
-    text-decoration: none; /* Asegura que no esté subrayado */
-    transform: scale(1.2); /* Agranda el texto del enlace */
+    color: bisque; 
+    text-decoration: none; 
+    transform: scale(1.2); 
 }
 
-/* Estilo base para el li (sin cambios de color, solo el escalado) */
 li {
     font-size: 30px;
     display: inline-block;
     padding-right: 15px;
     margin-bottom: -10px;
-    border: 2px solid transparent; /* Mantiene el borde invisible */
-     /* Solo transición en la escala */
+    border: 2px solid transparent; 
+    
 }
 
-/* Hover en el li */
 li:hover {
-    transform: scale(1.2); /* Escala el li */
+    transform: scale(1.2); 
 }
+
 .contenedor {
     justify-items: center;
     height: 75%;
