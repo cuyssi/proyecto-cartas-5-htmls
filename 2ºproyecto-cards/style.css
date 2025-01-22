@@ -1,0 +1,204 @@
+* {/*evita que los elementos se salgan del area del DOM*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+body {/*cuerpo del DOM para que aprobeche todo el espacio*/
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: zcool-gaegu, sans-serif;
+}
+
+header {/*cabecera de la pagina*/ 
+  height: 15%; 
+  display: flex;
+  align-items: center;
+  background-color: #66718b;
+  padding: 20px 3px;
+  border-bottom: 3px double #333;/*borde decorativo*/
+  justify-content: space-between;
+}
+
+h1 {/*pone el titulo en el centro y le da un sombreado*/
+  color: white;
+  margin-left: 30px;
+  font-size: 49px;
+  text-shadow: 3px -1px rgb(20, 20, 20);
+}
+
+ul {/*pone la lista del header a la izq y abajo*/
+  text-align: right;
+  margin-right: 100px ;
+  padding: 0px;
+  display: flex;
+  list-style: none;
+}
+
+li {/*elementos de la lista*/
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+  font-size: 30px
+}
+
+li a {/*para darle estilo a los enlaces  y que no salgan sudrayados*/  
+  color: white;
+  text-shadow: 2px -1px rgb(70, 64, 67);
+  text-decoration: none;
+}
+
+li a:hover {
+  color: bisque;
+  font-size: 35px;
+}
+
+.grid {/*decora las cartas y las coloca con el grid*/
+  background-color: rgb(204, 167, 173);  
+  flex-grow: 1;
+  padding: 60px;
+  justify-items: center;
+  align-items: center;
+  display: grid;/*para distribuir las tarjetas*/
+  grid-template-columns: repeat(4, 1fr);/*4 columnas*/
+  gap: 20px;/*espacio entre los elementos*/
+  grid-template-areas: "cart1 cart2 cart3 cart4";/*se le asigna un area a cada elemento*/
+}
+
+.card {/*decora las cartas*/
+  width: 269px;
+  background-color: #ada9e0;
+  border: solid 2px white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgb(81, 80, 82);/*sombra*/
+}
+
+.noemi {/*se le asigna un area a cada elemento*/
+  grid-area: cart1;
+}
+
+.julia {
+  grid-area: cart2;
+}
+
+.sergio {
+  grid-area: cart3;
+}
+
+.soraya {
+  grid-area: cart4;
+}
+
+img {/*decora las fotos de los compis*/
+  width: 245px;
+  border: solid 1px white;
+  border-radius: 10px;
+}
+
+h2 {/*pone el nombre de los compis*/
+  font-size: 30px;
+  padding: 3px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  color: rgb(65, 61, 61);
+}
+
+.info {/*bloque de la carta donde van los gustos de los compis*/
+  background-color: beige;
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+p {/*frases con los gustos de los compis*/
+  font-size: 14px;  
+  text-align: left;
+  color: rgb(77, 73, 73);
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+span {/*pone cada gusto*/ 
+  color: rgb(96, 24, 100);
+  font-weight: 900;
+  font-size: 14px;  
+}
+
+footer {/*pone el footer en la parte de abajo*/
+  height: 10%;
+  background-color: #596066;
+  justify-items: center;
+  padding: 40px;
+  margin-top: 0px;
+}
+
+footer p {/*pone el texto del footer en el centro*/
+  color: rgb(235, 229, 233);
+  font-size: 18px;
+  text-shadow: 1px -2px rgb(54, 52, 53);/*sombra*/
+  margin-bottom: 0;
+}
+
+.comida::before {/*pone un icono antes de cada gusto*/
+  content: "🍕 "; 
+}
+
+.ciudad::before {
+  content: "🌆 "; 
+}
+
+.animal::before {
+  content: "🐶 "; 
+}
+
+.juego::before {
+  content: "🎲 "; 
+}
+
+.serie::before {
+  content: "📺 "; 
+}
+
+@media screen and (max-width: 750px) {/*cambia el diseño cuando la pantalla sea pequeña*/
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: 25%;
+    }
+  .grid {/*pone las cartas en una sola columna*/
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "cart1"
+      "cart2"
+      "cart3"
+      "cart4";
+    gap: 80px;
+  }
+  h1 {/*pone el titulo en el centro*/
+    padding: 15px;
+    margin-top: 0px;
+  }
+
+  ul {
+    margin-top: 0px;
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 750px) {
+    li a:hover {
+      /* Desactiva completamente el hover */
+      pointer-events: none;
+      color: inherit; /* Mantiene el color original */
+      font-size: 30px; /* Fija el tamaño de fuente */
+      text-shadow: none; /* Elimina el sombreado */
+      transform: none; /* Sin transformaciones */
+    }
+  }
+  
+}

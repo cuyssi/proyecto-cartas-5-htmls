@@ -1,0 +1,230 @@
+body {
+  background-color: rgb(204, 167, 173);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+header {
+  background-color: #66718B;   
+  grid-area: header;  
+  height: 100px;
+  padding: 10px;
+  border-bottom: 3px double #333; 
+  }
+
+ul {
+ text-align: right;
+ margin-top: -40px;
+}
+
+li { 
+ display: inline;
+ padding-right: 15px;
+ padding-left: 20px;
+}
+
+a {
+  color: white;
+  text-shadow: 2px -1px rgb(70, 64, 67);
+  text-decoration: none;
+}
+
+a:hover{
+  color:bisque
+}
+
+h1{
+  color: white;
+  font-size: 40px;
+  text-shadow: 3px -1px rgb(172, 167, 170);       
+}
+
+.contenedor {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "article collage"
+    "article collage"
+    "article cita";
+}
+
+.card-container {
+  margin-top: 20px;
+  grid-area: article;
+  background-color: rgb(204, 167, 173);
+}
+
+.card {
+  width: 280px;
+  height: 560px;
+  background-color:  #ADA9E0;
+  border: solid 2px white;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgb(81, 80, 82);
+}
+
+.foto-cara {
+  width: 280px;
+  border: solid 1px white;
+  border-radius: 10px;
+}
+h1 {
+  margin-left: 20px;
+  color: white;
+  font-size: 40px;
+  text-shadow: 3px -1px rgb(172, 167, 170);
+}
+
+h2 {
+  color: rgb(65, 61, 61);
+  margin-top: -3px;
+}
+
+.info {
+  background-color: beige;
+  width: 280px;
+  height: 240px;
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 0 5px 5px 5px;
+  margin: -16px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: rgb(77, 73, 73);
+}
+
+span {
+  color: rgb(96, 24, 100);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 30px;
+  color: rgb(82, 79, 79);
+  grid-area: cita;
+  margin-top: 120px;
+  margin-left: -100px;
+}
+
+.collage {
+  justify-content: center;
+  background-color: rgb(204, 167, 173);
+  position: relative;
+  width: 800px;
+  height: 300px;
+  margin: 20px auto;
+  grid-area: collage;
+  margin-top: 20px;
+}
+/*esta parte del collage es puro chatgpt*/
+.foto {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  transform: rotate(var(--rotation)); /* Aplica rotación */
+  transition: transform 0.3s ease; /* Animación opcional al interactuar */
+}
+
+.foto:hover {
+  transform: scale(1.1) rotate(var(--rotation)); /* Agranda ligeramente en hover */
+}
+
+
+.comida {
+  top: 20px;
+  left: 30px;
+  --rotation: -10deg;
+}
+
+.ciudad {
+  top: 50px;
+  left: 150px;
+  --rotation: 5deg;
+}
+
+.mascota {
+  top: 150px;
+  left: 50px;
+  --rotation: -5deg;
+}
+
+.juego {
+  top: 300px;
+  left: 200px;
+  --rotation: 15deg;
+}
+
+.serie {
+  top: 100px;
+  left: 250px;
+  --rotation: -15deg;
+}
+
+.cita {
+  width: 800px;
+  height: 200px;
+  grid-area: cita;
+  background-color: rgb(204, 167, 173);
+}
+
+.inicio {
+  margin-top: -15px;
+  margin-left: 700px;
+}
+
+
+@media screen and (max-width: 750px) {
+  body {
+      overflow-y: auto; /* Activa el scroll vertical en pantallas pequeñas */
+  }
+
+  h1 {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .contenedor {
+      justify-items: left;
+      margin-top: 20px;
+      margin-left: 70px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: 
+          "article"
+          "collage"
+          "cita";
+          
+      gap: 40px;
+  }
+
+  ul li {
+      margin-left: 20px;
+  }
+
+  .cita {
+    width: 300px;
+    margin-left: 70px;
+    margin-top: -200px;
+  }
+
+  .inicio {
+    font-size: 30px;
+    margin-left: 20%; 
+    margin-top: 50px;
+  }
+}
