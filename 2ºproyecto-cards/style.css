@@ -141,7 +141,7 @@ footer p {/*pone el texto del footer en el centro*/
   color: rgb(235, 229, 233);
   font-size: 18px;
   text-shadow: 1px -2px rgb(54, 52, 53);/*sombra*/
-  margin-bottom: 0;
+ margin-top: -20px;
 }
 
 .comida::before {/*pone un icono antes de cada gusto*/
