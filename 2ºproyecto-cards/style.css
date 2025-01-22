@@ -42,24 +42,34 @@ ul {
     list-style: none;
 }
 
-li {
-    /*elementos de la lista*/
-    margin-top: 20px;
-    margin-right: 10px;
-    margin-left: 20px;
-    font-size: 30px;
-}
-
-li a {
-    /*para darle estilo a los enlaces  y que no salgan sudrayados*/
+a {
     color: white;
     text-shadow: 2px -1px rgb(70, 64, 67);
-    text-decoration: none;
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 30px;
+    margin-right: 10px;
+    display: inline-block; /* Asegura que sea tratado como bloque */
 }
 
-li a:hover {
-    color: bisque;
-    font-size: 35px;
+a:hover {
+    color: bisque; /* Cambia el color del enlace */
+    text-decoration: none; /* Asegura que no esté subrayado */
+    transform: scale(1.2); /* Agranda el texto del enlace */
+}
+
+/* Estilo base para el li (sin cambios de color, solo el escalado) */
+li {
+    font-size: 30px;
+    display: inline-block;
+    padding-right: 15px;    
+    margin-bottom: -10px;
+    border: 2px solid transparent; /* Mantiene el borde invisible */
+     /* Solo transición en la escala */
+}
+
+/* Hover en el li */
+li:hover {
+    transform: scale(1.2); /* Escala el li */
 }
 
 .grid {

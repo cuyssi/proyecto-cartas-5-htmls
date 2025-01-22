@@ -32,24 +32,36 @@ ul {
     margin-top: -40px;
 }
 
-li {
-    font-size: 30px;
-    display: inline;
-    padding-right: 15px;   
-    padding-left:  15px;
-    margin-bottom: -10px; 
-}
-
 a {
     color: white;
     text-shadow: 2px -1px rgb(70, 64, 67);
-    text-decoration: none;
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 30px;
+     /* Solo transición en color y escala */
+    display: inline-block; /* Asegura que sea tratado como bloque */
 }
 
+/* Hover en el enlace */
 a:hover {
-    color: bisque;
+    color: bisque; /* Cambia el color del enlace */
+    text-decoration: none; /* Asegura que no esté subrayado */
+    transform: scale(1.2); /* Agranda el texto del enlace */
 }
 
+/* Estilo base para el li (sin cambios de color, solo el escalado) */
+li {
+    font-size: 30px;
+    display: inline-block;
+    padding-right: 15px;
+    margin-bottom: -10px;
+    border: 2px solid transparent; /* Mantiene el borde invisible */
+     /* Solo transición en la escala */
+}
+
+/* Hover en el li */
+li:hover {
+    transform: scale(1.2); /* Escala el li */
+}
 .contenedor {
     justify-items: center;
     height: 75%;
