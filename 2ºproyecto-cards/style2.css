@@ -15,8 +15,8 @@ body {
 }
 header {
     background-color: #66718b;      
-    height:  25%;
-    padding: 40px;
+    height:  20%;
+    padding: 20px;
     border-bottom: 3px double #333;
 }
 
@@ -31,7 +31,7 @@ h1 {
 ul {
     text-align: right;
     margin-right: 30px;
-    margin-top: -40px;
+    margin-top: -50px;
 }
 
 a {/*todo este bloque hasta el contenedor es para hacer el hover de los enlaces del nav sin que se mueva el header, tuve que pedir ayuda a chatgpt*/
@@ -201,6 +201,14 @@ h3 {
 .inicio {
     font-size: 40px;    
     margin-left: 600px;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .grid {
+        
+    }
+
+
 }
 
 @media screen and (max-width: 750px) {
