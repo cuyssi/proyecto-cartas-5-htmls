@@ -62,6 +62,7 @@ li:hover {
 }
 
 .contenedor {
+    margin-left: 5%;
     justify-items: center;
     height: 75%;
     display: grid;
@@ -74,6 +75,7 @@ li:hover {
 }
 
 .card-container {
+    
     margin-top: 20px;
     grid-area: article;
     background-color: rgb(204, 167, 173);
@@ -133,7 +135,8 @@ h3 {
     color: rgb(82, 79, 79);
     grid-area: cita;
     margin-top: 120px;
-    margin-left: -100px;
+    margin-left: 20px;
+    width: 700px;
 }
 
 .collage {
@@ -145,6 +148,7 @@ h3 {
     margin: 20px auto;
     grid-area: collage;
     margin-top: 20px;
+    margin-left: 60px;
 }
 /*esta parte del collage es puro chatgpt*/
 .foto {
@@ -174,8 +178,8 @@ h3 {
 
 .mascota {
     top: 150px;
-    left: 50px;
-    --rotation: -5deg;
+    left: 60px;
+    --rotation: 9deg;
 }
 
 .juego {
@@ -186,13 +190,14 @@ h3 {
 
 .serie {
     top: 100px;
-    left: 350px;
+    left: 400px;
     --rotation: -15deg;
 }
 
 .cita {
+    margin-right: 100px;
     margin-top: 20px;
-    width: 800px;
+    width: 750px;
     height: 200px;
     grid-area: cita;
     background-color: rgb(204, 167, 173);
@@ -200,31 +205,86 @@ h3 {
 
 .inicio {
     font-size: 40px;    
-    margin-left: 600px;
+    margin-left: 500px;
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px){
-    .grid {
-        
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    
+    ul {
+        margin-right: 0px;
+        margin-top: -50px;
     }
 
+    li a{
+        font-size:  20px;        
+    }
+    
+    .grid {/*tablets*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "article collage"
+            "article collage"
+            "article cita";
+    }    
 
+    .card {
+         grid-area: article;
+         margin-left: 40px;
+    }
+
+    .collage {
+        grid-area: collage;
+        width: 500px;
+    }
+
+    .cita {
+        grid-area: cita;
+        width: 300px;
+        height: 200px;
+       margin-left: 20%;        
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .inicio {
+        font-size: 40px;
+        margin-left: 600px;
+    }
 }
 
-@media screen and (max-width: 750px) {
+@media (min-width: 481px) and (max-width: 767px) {
+    
+    * { /*evita que los elementos se salgan del area del DOM*/
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
     body {
         overflow-y: auto; /* Activa el scroll vertical en pantallas pequeñas */
+        width: 100%;
+        height: 100vh;
     }
 
     h1 {
-        padding: 10px;
-        margin-top: 10px;
+       padding-left: 30px;                
+    }    
+
+    ul li {        
+        padding-top: 40px;
+        padding-left: 20px;        
     }
 
+    li a{
+        font-size: 20px;       
+    }
+    
     .contenedor {
-        justify-items: left;
-        margin-top: 20px;
-        margin-left: 70px;
+        justify-items: left;        
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
@@ -235,14 +295,24 @@ h3 {
         gap: 40px;
     }
 
-    ul li {
-        margin-left: 20px;
+    .card {
+        margin-top: 40px;
+        margin-left: 35%;
+        grid-area: article;
+    }
+
+    .collage {
+        grid-area: collage;
+        margin-top: 60px;
+        margin-right: 30%;
+        padding: 10px;
     }
 
     .cita {
+        grid-area: cita;
         width: 300px;
-        margin-left: 70px;
-        margin-top: -200px;
+        margin-left: 17%;
+        margin-top: -100px;
     }
 
     .inicio {
